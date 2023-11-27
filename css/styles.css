@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,300&display=swap");
+
+:root {
+  --color-light-50: #f8fafc;
+
+  --color-dark-50: #797984;
+  --color-dark-100: #312d37;
+  --color-dark-900: #000;
+
+  --color-blue-50: rgb(82, 137, 212);
+  --color-blue-100: rgb(40, 122, 237);
+  --color-blue-200: rgb(6, 71, 161);
+
+  --color-gradient: linear-gradient(
+    90deg,
+    var(--color-blue-50),
+    var(--color-blue-100),
+    var(--color-blue-200)
+  );
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--color-gradient);
+}
+
+#container {
+  background-color: var(--color-light-50);
+  padding: 25px 35px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.366);
+  height: fit-content;
+  border-radius: 5px;
+}
+
+#container h2 {
+  color: var(--color-dark-900);
+  margin-bottom: 20px;
+}
+
+.box-calc {
+  display: flex;
+  flex-direction: column;
+  color: #000;
+}
+.box-calc label {
+  margin-bottom: 20px;
+}
+.box-calc input {
+  background: transparent;
+  margin-bottom: 20px;
+  border: none;
+  border-bottom: 1px solid;
+  border-image-slice: 1;
+  border-image-source: var(--color-gradient);
+}
+
+.box-calc input:focus {
+  outline: none;
+}
+
+.calculado {
+  text-align: center;
+}
+
+.calculado span {
+  font-size: 35px;
+}
+
+button {
+  width: 100%;
+  padding: 6px;
+  margin-top: 10px;
+  background: var(--color-gradient);
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 450px) {
+  #container {
+    width: 90%;
+  }
+}
